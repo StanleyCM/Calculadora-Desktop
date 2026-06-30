@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Calculadora/Calculadora.WinForms/Calculadora.WinForms.csproj" />
+  <Project Path="Calculadora/Calculadora.Core/Calculadora.Core.csproj" />
+</Solution>
