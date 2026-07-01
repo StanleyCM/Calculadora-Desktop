@@ -48,34 +48,6 @@ Calculadora/
 - [.NET 10 SDK](https://dotnet.microsoft.com/download).
 - Visual Studio con la carga de trabajo **Desarrollo de escritorio de .NET**.
 
-## Instalación y ejecución
-
-1. Clona el repositorio:
-
-```bash
-git clone <URL_DEL_REPOSITORIO>
-```
-
-2. Accede al directorio del proyecto:
-
-```bash
-cd Calculadora
-```
-
-3. Restaura las dependencias:
-
-```bash
-dotnet restore
-```
-
-4. Ejecuta la aplicación:
-
-```bash
-dotnet run --project Calculadora/Calculadora.WinForms
-```
-
-También puedes abrir el archivo `Calculadora.sln` en Visual Studio y presionar `F5`.
-
 ## Controles del teclado
 
 | Tecla | Acción |
