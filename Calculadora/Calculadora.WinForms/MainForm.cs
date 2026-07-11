@@ -12,9 +12,6 @@ public partial class MainForm : Form
     private CalculatorOperation? _repeatOperation;
     private bool _startNewEntry = true;
     private bool _hasError;
-    private decimal _memory;
-    private bool _degreesMode = true;
-    private readonly Stack<(decimal LeftOperand, CalculatorOperation? Operation)> _parentheses = new();
     private float _displayMaximumFontSize;
 
     private const float DisplayReducedFontSize = 19f;
@@ -52,28 +49,6 @@ public partial class MainForm : Form
         btnMenos.Click += OperationButton_Click;
         btnX.Click += OperationButton_Click;
         btnDiv.Click += OperationButton_Click;
-        btnPower.Click += OperationButton_Click;
-
-        btnSqrt.Click += (_, _) => ApplyUnary(_calculator.SquareRoot);
-        btnSquare.Click += (_, _) => ApplyUnary(value => _calculator.Power(value, 2m));
-        btnInverse.Click += (_, _) => ApplyUnary(value => _calculator.Divide(1m, value));
-        btnLog.Click += (_, _) => ApplyUnary(_calculator.Base10Logarithm);
-        btnLn.Click += (_, _) => ApplyUnary(_calculator.NaturalLogarithm);
-        btnSin.Click += (_, _) => ApplyUnary(value => _calculator.Sine(value, _degreesMode));
-        btnCos.Click += (_, _) => ApplyUnary(value => _calculator.Cosine(value, _degreesMode));
-        btnTan.Click += (_, _) => ApplyUnary(value => _calculator.Tangent(value, _degreesMode));
-        btnAsin.Click += (_, _) => ApplyUnary(value => _calculator.ArcSine(value, _degreesMode));
-        btnAcos.Click += (_, _) => ApplyUnary(value => _calculator.ArcCosine(value, _degreesMode));
-        btnAtan.Click += (_, _) => ApplyUnary(value => _calculator.ArcTangent(value, _degreesMode));
-
-        btnPi.Click += (_, _) => EnterConstant((decimal)Math.PI);
-        btnEuler.Click += (_, _) => EnterConstant((decimal)Math.E);
-        btnMC.Click += (_, _) => _memory = 0m;
-        btnMR.Click += (_, _) => RecallMemory();
-        btnMPlus.Click += (_, _) => ChangeMemory(ReadDisplay());
-        btnMMinus.Click += (_, _) => ChangeMemory(-ReadDisplay());
-        btnAngleMode.Click += (_, _) => ToggleAngleMode();
-        btnParenthesis.Click += (_, _) => ToggleParenthesis();
 
         KeyPreview = true;
         KeyDown += MainForm_KeyDown;
@@ -163,10 +138,6 @@ public partial class MainForm : Form
         {
             SelectOperation(CalculatorOperation.Divide);
         }
-        else if (sender == btnPower)
-        {
-            SelectOperation(CalculatorOperation.Power);
-        }
     }
 
     private void SelectOperation(CalculatorOperation operation)
@@ -245,7 +216,6 @@ public partial class MainForm : Form
         _repeatOperation = null;
         _startNewEntry = true;
         _hasError = false;
-        _parentheses.Clear();
         txtDisplay.Text = "0";
     }
 
@@ -336,112 +306,6 @@ public partial class MainForm : Form
             ShowError();
             return false;
         }
-        catch (ArithmeticException)
-        {
-            result = 0m;
-            ShowError();
-            return false;
-        }
-    }
-
-    private void ApplyUnary(Func<decimal, decimal> operation)
-    {
-        if (_hasError)
-        {
-            return;
-        }
-
-        try
-        {
-            ShowValue(operation(ReadDisplay()));
-            _startNewEntry = true;
-        }
-        catch (Exception exception) when (
-            exception is ArithmeticException or DivideByZeroException or OverflowException)
-        {
-            ShowError();
-        }
-    }
-
-    private void EnterConstant(decimal value)
-    {
-        if (_hasError)
-        {
-            ClearCalculator();
-        }
-
-        ShowValue(value);
-        _startNewEntry = false;
-    }
-
-    private void ChangeMemory(decimal amount)
-    {
-        if (_hasError)
-        {
-            return;
-        }
-
-        try
-        {
-            _memory += amount;
-        }
-        catch (OverflowException)
-        {
-            ShowError();
-        }
-    }
-
-    private void RecallMemory()
-    {
-        if (_hasError)
-        {
-            ClearCalculator();
-        }
-
-        ShowValue(_memory);
-        _startNewEntry = false;
-    }
-
-    private void ToggleAngleMode()
-    {
-        _degreesMode = !_degreesMode;
-        btnAngleMode.Text = _degreesMode ? "DEG" : "RAD";
-    }
-
-    private void ToggleParenthesis()
-    {
-        if (_hasError)
-        {
-            return;
-        }
-
-        if (_parentheses.Count == 0 || _startNewEntry)
-        {
-            _parentheses.Push((_leftOperand, _pendingOperation));
-            _leftOperand = 0m;
-            _pendingOperation = null;
-            _startNewEntry = true;
-            txtDisplay.Text = "0";
-            return;
-        }
-
-        if (_pendingOperation is not null)
-        {
-            decimal rightOperand = ReadDisplay();
-            if (!TryCalculate(_leftOperand, rightOperand, _pendingOperation.Value, out decimal innerResult))
-            {
-                return;
-            }
-
-            ShowValue(innerResult);
-        }
-
-        decimal groupedValue = ReadDisplay();
-        (decimal outerLeft, CalculatorOperation? outerOperation) = _parentheses.Pop();
-        _leftOperand = outerLeft;
-        _pendingOperation = outerOperation;
-        _startNewEntry = false;
-        ShowValue(groupedValue);
     }
 
     private decimal ReadDisplay() =>
@@ -466,7 +330,6 @@ public partial class MainForm : Form
         _repeatOperation = null;
         _startNewEntry = true;
         _hasError = true;
-        _parentheses.Clear();
         txtDisplay.Text = "SINTAXERROR";
     }
 
@@ -547,16 +410,4 @@ public partial class MainForm : Form
             GraphicsUnit.Point);
         previousFont.Dispose();
     }
-
-    private void circularButton1_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void circularButton1_Click_1(object sender, EventArgs e)
-    {
-
-    }
-
-    private void circularButton9_Click(object sender, EventArgs e) { }
 }
