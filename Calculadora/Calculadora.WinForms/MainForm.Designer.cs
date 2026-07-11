@@ -49,6 +49,26 @@ namespace Calculadora.WinForms
             btn0 = new CircularButton();
             btnPoint = new CircularButton();
             btnIgual = new CircularButton();
+            btnPi = new CircularButton();
+            btnParenthesis = new CircularButton();
+            btnMC = new CircularButton();
+            btnMR = new CircularButton();
+            btnMPlus = new CircularButton();
+            btnMMinus = new CircularButton();
+            btnSquare = new CircularButton();
+            btnLn = new CircularButton();
+            btnLog = new CircularButton();
+            btnInverse = new CircularButton();
+            btnPower = new CircularButton();
+            btnSqrt = new CircularButton();
+            btnTan = new CircularButton();
+            btnCos = new CircularButton();
+            btnSin = new CircularButton();
+            btnEuler = new CircularButton();
+            btnAtan = new CircularButton();
+            btnAcos = new CircularButton();
+            btnAsin = new CircularButton();
+            btnAngleMode = new CircularButton();
             SuspendLayout();
             // 
             // btnDel
@@ -59,7 +79,7 @@ namespace Calculadora.WinForms
             btnDel.FlatAppearance.BorderSize = 0;
             btnDel.FlatStyle = FlatStyle.Flat;
             btnDel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDel.Location = new Point(36, 123);
+            btnDel.Location = new Point(36, 315);
             btnDel.Name = "btnDel";
             btnDel.Size = new Size(64, 64);
             btnDel.TabIndex = 12;
@@ -73,11 +93,11 @@ namespace Calculadora.WinForms
             txtDisplay.BorderStyle = BorderStyle.None;
             txtDisplay.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtDisplay.ForeColor = SystemColors.Menu;
-            txtDisplay.Location = new Point(36, 44);
+            txtDisplay.Location = new Point(36, 36);
             txtDisplay.Multiline = true;
             txtDisplay.Name = "txtDisplay";
             txtDisplay.RightToLeft = RightToLeft.No;
-            txtDisplay.Size = new Size(306, 64);
+            txtDisplay.Size = new Size(304, 64);
             txtDisplay.TabIndex = 20;
             txtDisplay.Text = "0";
             txtDisplay.TextAlign = HorizontalAlignment.Right;
@@ -91,7 +111,7 @@ namespace Calculadora.WinForms
             btnDiv.FlatAppearance.BorderSize = 0;
             btnDiv.FlatStyle = FlatStyle.Flat;
             btnDiv.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDiv.Location = new Point(279, 123);
+            btnDiv.Location = new Point(279, 315);
             btnDiv.Name = "btnDiv";
             btnDiv.Size = new Size(64, 64);
             btnDiv.TabIndex = 21;
@@ -106,7 +126,7 @@ namespace Calculadora.WinForms
             btnAC.FlatAppearance.BorderSize = 0;
             btnAC.FlatStyle = FlatStyle.Flat;
             btnAC.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAC.Location = new Point(115, 123);
+            btnAC.Location = new Point(115, 315);
             btnAC.Name = "btnAC";
             btnAC.Size = new Size(64, 64);
             btnAC.TabIndex = 22;
@@ -121,7 +141,7 @@ namespace Calculadora.WinForms
             btnPorcent.FlatAppearance.BorderSize = 0;
             btnPorcent.FlatStyle = FlatStyle.Flat;
             btnPorcent.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPorcent.Location = new Point(198, 123);
+            btnPorcent.Location = new Point(198, 315);
             btnPorcent.Name = "btnPorcent";
             btnPorcent.Size = new Size(64, 64);
             btnPorcent.TabIndex = 23;
@@ -137,7 +157,7 @@ namespace Calculadora.WinForms
             btn7.FlatAppearance.BorderSize = 0;
             btn7.FlatStyle = FlatStyle.Flat;
             btn7.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn7.Location = new Point(36, 203);
+            btn7.Location = new Point(36, 395);
             btn7.Name = "btn7";
             btn7.Size = new Size(64, 64);
             btn7.TabIndex = 24;
@@ -152,7 +172,7 @@ namespace Calculadora.WinForms
             btn4.FlatAppearance.BorderSize = 0;
             btn4.FlatStyle = FlatStyle.Flat;
             btn4.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn4.Location = new Point(36, 284);
+            btn4.Location = new Point(36, 476);
             btn4.Name = "btn4";
             btn4.Size = new Size(64, 64);
             btn4.TabIndex = 25;
@@ -167,7 +187,7 @@ namespace Calculadora.WinForms
             btn1.FlatAppearance.BorderSize = 0;
             btn1.FlatStyle = FlatStyle.Flat;
             btn1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn1.Location = new Point(36, 365);
+            btn1.Location = new Point(36, 557);
             btn1.Name = "btn1";
             btn1.Size = new Size(64, 64);
             btn1.TabIndex = 26;
@@ -182,7 +202,7 @@ namespace Calculadora.WinForms
             btnPosNeg.FlatAppearance.BorderSize = 0;
             btnPosNeg.FlatStyle = FlatStyle.Flat;
             btnPosNeg.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPosNeg.Location = new Point(36, 447);
+            btnPosNeg.Location = new Point(36, 639);
             btnPosNeg.Name = "btnPosNeg";
             btnPosNeg.Size = new Size(64, 64);
             btnPosNeg.TabIndex = 27;
@@ -197,7 +217,7 @@ namespace Calculadora.WinForms
             btn8.FlatAppearance.BorderSize = 0;
             btn8.FlatStyle = FlatStyle.Flat;
             btn8.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn8.Location = new Point(115, 203);
+            btn8.Location = new Point(115, 395);
             btn8.Name = "btn8";
             btn8.Size = new Size(64, 64);
             btn8.TabIndex = 28;
@@ -212,7 +232,7 @@ namespace Calculadora.WinForms
             btn9.FlatAppearance.BorderSize = 0;
             btn9.FlatStyle = FlatStyle.Flat;
             btn9.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn9.Location = new Point(198, 203);
+            btn9.Location = new Point(198, 395);
             btn9.Name = "btn9";
             btn9.Size = new Size(64, 64);
             btn9.TabIndex = 29;
@@ -227,7 +247,7 @@ namespace Calculadora.WinForms
             btnX.FlatAppearance.BorderSize = 0;
             btnX.FlatStyle = FlatStyle.Flat;
             btnX.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnX.Location = new Point(279, 203);
+            btnX.Location = new Point(279, 395);
             btnX.Name = "btnX";
             btnX.Size = new Size(64, 64);
             btnX.TabIndex = 30;
@@ -242,7 +262,7 @@ namespace Calculadora.WinForms
             btn5.FlatAppearance.BorderSize = 0;
             btn5.FlatStyle = FlatStyle.Flat;
             btn5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn5.Location = new Point(115, 284);
+            btn5.Location = new Point(115, 476);
             btn5.Name = "btn5";
             btn5.Size = new Size(64, 64);
             btn5.TabIndex = 31;
@@ -257,7 +277,7 @@ namespace Calculadora.WinForms
             btn6.FlatAppearance.BorderSize = 0;
             btn6.FlatStyle = FlatStyle.Flat;
             btn6.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn6.Location = new Point(198, 284);
+            btn6.Location = new Point(198, 476);
             btn6.Name = "btn6";
             btn6.Size = new Size(64, 64);
             btn6.TabIndex = 32;
@@ -272,7 +292,7 @@ namespace Calculadora.WinForms
             btnMenos.FlatAppearance.BorderSize = 0;
             btnMenos.FlatStyle = FlatStyle.Flat;
             btnMenos.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMenos.Location = new Point(279, 284);
+            btnMenos.Location = new Point(279, 476);
             btnMenos.Name = "btnMenos";
             btnMenos.Size = new Size(64, 64);
             btnMenos.TabIndex = 33;
@@ -287,7 +307,7 @@ namespace Calculadora.WinForms
             btn2.FlatAppearance.BorderSize = 0;
             btn2.FlatStyle = FlatStyle.Flat;
             btn2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn2.Location = new Point(115, 365);
+            btn2.Location = new Point(115, 557);
             btn2.Name = "btn2";
             btn2.Size = new Size(64, 64);
             btn2.TabIndex = 34;
@@ -302,7 +322,7 @@ namespace Calculadora.WinForms
             btn3.FlatAppearance.BorderSize = 0;
             btn3.FlatStyle = FlatStyle.Flat;
             btn3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn3.Location = new Point(198, 365);
+            btn3.Location = new Point(198, 557);
             btn3.Name = "btn3";
             btn3.Size = new Size(64, 64);
             btn3.TabIndex = 35;
@@ -317,7 +337,7 @@ namespace Calculadora.WinForms
             btnMas.FlatAppearance.BorderSize = 0;
             btnMas.FlatStyle = FlatStyle.Flat;
             btnMas.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMas.Location = new Point(279, 365);
+            btnMas.Location = new Point(279, 557);
             btnMas.Name = "btnMas";
             btnMas.Size = new Size(64, 64);
             btnMas.TabIndex = 36;
@@ -332,7 +352,7 @@ namespace Calculadora.WinForms
             btn0.FlatAppearance.BorderSize = 0;
             btn0.FlatStyle = FlatStyle.Flat;
             btn0.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn0.Location = new Point(115, 447);
+            btn0.Location = new Point(115, 639);
             btn0.Name = "btn0";
             btn0.Size = new Size(64, 64);
             btn0.TabIndex = 37;
@@ -347,7 +367,7 @@ namespace Calculadora.WinForms
             btnPoint.FlatAppearance.BorderSize = 0;
             btnPoint.FlatStyle = FlatStyle.Flat;
             btnPoint.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnPoint.Location = new Point(198, 447);
+            btnPoint.Location = new Point(198, 639);
             btnPoint.Name = "btnPoint";
             btnPoint.Size = new Size(64, 64);
             btnPoint.TabIndex = 38;
@@ -362,12 +382,313 @@ namespace Calculadora.WinForms
             btnIgual.FlatAppearance.BorderSize = 0;
             btnIgual.FlatStyle = FlatStyle.Flat;
             btnIgual.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnIgual.Location = new Point(279, 447);
+            btnIgual.Location = new Point(279, 639);
             btnIgual.Name = "btnIgual";
             btnIgual.Size = new Size(64, 64);
             btnIgual.TabIndex = 39;
             btnIgual.Text = "=";
             btnIgual.UseVisualStyleBackColor = false;
+            // 
+            // btnPi
+            // 
+            btnPi.BackColor = SystemColors.ControlDarkDark;
+            btnPi.BackgroundImageLayout = ImageLayout.Stretch;
+            btnPi.Cursor = Cursors.Hand;
+            btnPi.FlatAppearance.BorderSize = 0;
+            btnPi.FlatStyle = FlatStyle.Flat;
+            btnPi.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPi.Location = new Point(36, 262);
+            btnPi.Name = "btnPi";
+            btnPi.Size = new Size(56, 43);
+            btnPi.TabIndex = 45;
+            btnPi.Text = "π";
+            btnPi.UseVisualStyleBackColor = false;
+            // 
+            // btnParenthesis
+            // 
+            btnParenthesis.BackColor = SystemColors.ControlDarkDark;
+            btnParenthesis.BackgroundImageLayout = ImageLayout.Stretch;
+            btnParenthesis.Cursor = Cursors.Hand;
+            btnParenthesis.FlatAppearance.BorderSize = 0;
+            btnParenthesis.FlatStyle = FlatStyle.Flat;
+            btnParenthesis.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnParenthesis.Location = new Point(98, 262);
+            btnParenthesis.Name = "btnParenthesis";
+            btnParenthesis.Size = new Size(56, 43);
+            btnParenthesis.TabIndex = 46;
+            btnParenthesis.Text = "( )";
+            btnParenthesis.UseVisualStyleBackColor = false;
+            // 
+            // btnMC
+            // 
+            btnMC.BackColor = SystemColors.ControlDarkDark;
+            btnMC.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMC.Cursor = Cursors.Hand;
+            btnMC.FlatAppearance.BorderSize = 0;
+            btnMC.FlatStyle = FlatStyle.Flat;
+            btnMC.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMC.Location = new Point(160, 262);
+            btnMC.Name = "btnMC";
+            btnMC.Size = new Size(56, 43);
+            btnMC.TabIndex = 47;
+            btnMC.Text = "MC";
+            btnMC.UseVisualStyleBackColor = false;
+            // 
+            // btnMR
+            // 
+            btnMR.BackColor = SystemColors.ControlDarkDark;
+            btnMR.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMR.Cursor = Cursors.Hand;
+            btnMR.FlatAppearance.BorderSize = 0;
+            btnMR.FlatStyle = FlatStyle.Flat;
+            btnMR.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMR.Location = new Point(222, 262);
+            btnMR.Name = "btnMR";
+            btnMR.Size = new Size(56, 43);
+            btnMR.TabIndex = 48;
+            btnMR.Text = "MR";
+            btnMR.UseVisualStyleBackColor = false;
+            // 
+            // btnMPlus
+            // 
+            btnMPlus.BackColor = SystemColors.ControlDarkDark;
+            btnMPlus.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMPlus.Cursor = Cursors.Hand;
+            btnMPlus.FlatAppearance.BorderSize = 0;
+            btnMPlus.FlatStyle = FlatStyle.Flat;
+            btnMPlus.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMPlus.Location = new Point(284, 262);
+            btnMPlus.Name = "btnMPlus";
+            btnMPlus.Size = new Size(56, 43);
+            btnMPlus.TabIndex = 49;
+            btnMPlus.Text = "M+";
+            btnMPlus.UseVisualStyleBackColor = false;
+            // 
+            // btnMMinus
+            // 
+            btnMMinus.BackColor = SystemColors.ControlDarkDark;
+            btnMMinus.BackgroundImageLayout = ImageLayout.Stretch;
+            btnMMinus.Cursor = Cursors.Hand;
+            btnMMinus.FlatAppearance.BorderSize = 0;
+            btnMMinus.FlatStyle = FlatStyle.Flat;
+            btnMMinus.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMMinus.Location = new Point(284, 213);
+            btnMMinus.Name = "btnMMinus";
+            btnMMinus.Size = new Size(56, 43);
+            btnMMinus.TabIndex = 50;
+            btnMMinus.Text = "M-";
+            btnMMinus.UseVisualStyleBackColor = false;
+            // 
+            // btnSquare
+            // 
+            btnSquare.BackColor = SystemColors.ControlDarkDark;
+            btnSquare.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSquare.Cursor = Cursors.Hand;
+            btnSquare.FlatAppearance.BorderSize = 0;
+            btnSquare.FlatStyle = FlatStyle.Flat;
+            btnSquare.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSquare.Location = new Point(284, 164);
+            btnSquare.Name = "btnSquare";
+            btnSquare.Size = new Size(56, 43);
+            btnSquare.TabIndex = 51;
+            btnSquare.Text = "x²";
+            btnSquare.UseVisualStyleBackColor = false;
+            // 
+            // btnLn
+            // 
+            btnLn.BackColor = SystemColors.ControlDarkDark;
+            btnLn.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLn.Cursor = Cursors.Hand;
+            btnLn.FlatAppearance.BorderSize = 0;
+            btnLn.FlatStyle = FlatStyle.Flat;
+            btnLn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLn.Location = new Point(222, 213);
+            btnLn.Name = "btnLn";
+            btnLn.Size = new Size(56, 43);
+            btnLn.TabIndex = 52;
+            btnLn.Text = "ln";
+            btnLn.UseVisualStyleBackColor = false;
+            // 
+            // btnLog
+            // 
+            btnLog.BackColor = SystemColors.ControlDarkDark;
+            btnLog.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLog.Cursor = Cursors.Hand;
+            btnLog.FlatAppearance.BorderSize = 0;
+            btnLog.FlatStyle = FlatStyle.Flat;
+            btnLog.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLog.Location = new Point(160, 213);
+            btnLog.Name = "btnLog";
+            btnLog.Size = new Size(56, 43);
+            btnLog.TabIndex = 53;
+            btnLog.Text = "log";
+            btnLog.UseVisualStyleBackColor = false;
+            // 
+            // btnInverse
+            // 
+            btnInverse.BackColor = SystemColors.ControlDarkDark;
+            btnInverse.BackgroundImageLayout = ImageLayout.Stretch;
+            btnInverse.Cursor = Cursors.Hand;
+            btnInverse.FlatAppearance.BorderSize = 0;
+            btnInverse.FlatStyle = FlatStyle.Flat;
+            btnInverse.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnInverse.Location = new Point(98, 213);
+            btnInverse.Name = "btnInverse";
+            btnInverse.Size = new Size(56, 43);
+            btnInverse.TabIndex = 54;
+            btnInverse.Text = "1/x";
+            btnInverse.UseVisualStyleBackColor = false;
+            // 
+            // btnPower
+            // 
+            btnPower.BackColor = SystemColors.ControlDarkDark;
+            btnPower.BackgroundImageLayout = ImageLayout.Stretch;
+            btnPower.Cursor = Cursors.Hand;
+            btnPower.FlatAppearance.BorderSize = 0;
+            btnPower.FlatStyle = FlatStyle.Flat;
+            btnPower.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPower.Location = new Point(36, 213);
+            btnPower.Name = "btnPower";
+            btnPower.Size = new Size(56, 43);
+            btnPower.TabIndex = 55;
+            btnPower.Text = "xʸ";
+            btnPower.UseVisualStyleBackColor = false;
+            // 
+            // btnSqrt
+            // 
+            btnSqrt.BackColor = SystemColors.ControlDarkDark;
+            btnSqrt.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSqrt.Cursor = Cursors.Hand;
+            btnSqrt.FlatAppearance.BorderSize = 0;
+            btnSqrt.FlatStyle = FlatStyle.Flat;
+            btnSqrt.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSqrt.Location = new Point(222, 164);
+            btnSqrt.Name = "btnSqrt";
+            btnSqrt.Size = new Size(56, 43);
+            btnSqrt.TabIndex = 56;
+            btnSqrt.Text = "√";
+            btnSqrt.UseVisualStyleBackColor = false;
+            // 
+            // btnTan
+            // 
+            btnTan.BackColor = SystemColors.ControlDarkDark;
+            btnTan.BackgroundImageLayout = ImageLayout.Stretch;
+            btnTan.Cursor = Cursors.Hand;
+            btnTan.FlatAppearance.BorderSize = 0;
+            btnTan.FlatStyle = FlatStyle.Flat;
+            btnTan.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTan.Location = new Point(160, 164);
+            btnTan.Name = "btnTan";
+            btnTan.Size = new Size(56, 43);
+            btnTan.TabIndex = 57;
+            btnTan.Text = "Tan";
+            btnTan.UseVisualStyleBackColor = false;
+            // 
+            // btnCos
+            // 
+            btnCos.BackColor = SystemColors.ControlDarkDark;
+            btnCos.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCos.Cursor = Cursors.Hand;
+            btnCos.FlatAppearance.BorderSize = 0;
+            btnCos.FlatStyle = FlatStyle.Flat;
+            btnCos.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCos.Location = new Point(98, 164);
+            btnCos.Name = "btnCos";
+            btnCos.Size = new Size(56, 43);
+            btnCos.TabIndex = 58;
+            btnCos.Text = "Cos";
+            btnCos.UseVisualStyleBackColor = false;
+            // 
+            // btnSin
+            // 
+            btnSin.BackColor = SystemColors.ControlDarkDark;
+            btnSin.BackgroundImageLayout = ImageLayout.Stretch;
+            btnSin.Cursor = Cursors.Hand;
+            btnSin.FlatAppearance.BorderSize = 0;
+            btnSin.FlatStyle = FlatStyle.Flat;
+            btnSin.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSin.Location = new Point(36, 164);
+            btnSin.Name = "btnSin";
+            btnSin.Size = new Size(56, 43);
+            btnSin.TabIndex = 59;
+            btnSin.Text = "Sin";
+            btnSin.UseVisualStyleBackColor = false;
+            btnSin.Click += circularButton9_Click;
+            // 
+            // btnEuler
+            // 
+            btnEuler.BackColor = SystemColors.ControlDarkDark;
+            btnEuler.BackgroundImageLayout = ImageLayout.Stretch;
+            btnEuler.Cursor = Cursors.Hand;
+            btnEuler.FlatAppearance.BorderSize = 0;
+            btnEuler.FlatStyle = FlatStyle.Flat;
+            btnEuler.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEuler.Location = new Point(36, 115);
+            btnEuler.Name = "btnEuler";
+            btnEuler.Size = new Size(56, 43);
+            btnEuler.TabIndex = 60;
+            btnEuler.Text = "e";
+            btnEuler.UseVisualStyleBackColor = false;
+            // 
+            // btnAtan
+            // 
+            btnAtan.BackColor = SystemColors.ControlDarkDark;
+            btnAtan.BackgroundImageLayout = ImageLayout.Stretch;
+            btnAtan.Cursor = Cursors.Hand;
+            btnAtan.FlatAppearance.BorderSize = 0;
+            btnAtan.FlatStyle = FlatStyle.Flat;
+            btnAtan.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAtan.Location = new Point(98, 115);
+            btnAtan.Name = "btnAtan";
+            btnAtan.Size = new Size(56, 43);
+            btnAtan.TabIndex = 61;
+            btnAtan.Text = "Tan⁻¹";
+            btnAtan.UseVisualStyleBackColor = false;
+            // 
+            // btnAcos
+            // 
+            btnAcos.BackColor = SystemColors.ControlDarkDark;
+            btnAcos.BackgroundImageLayout = ImageLayout.Stretch;
+            btnAcos.Cursor = Cursors.Hand;
+            btnAcos.FlatAppearance.BorderSize = 0;
+            btnAcos.FlatStyle = FlatStyle.Flat;
+            btnAcos.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAcos.Location = new Point(160, 115);
+            btnAcos.Name = "btnAcos";
+            btnAcos.Size = new Size(56, 43);
+            btnAcos.TabIndex = 62;
+            btnAcos.Text = "Cos⁻¹";
+            btnAcos.UseVisualStyleBackColor = false;
+            // 
+            // btnAsin
+            // 
+            btnAsin.BackColor = SystemColors.ControlDarkDark;
+            btnAsin.BackgroundImageLayout = ImageLayout.Stretch;
+            btnAsin.Cursor = Cursors.Hand;
+            btnAsin.FlatAppearance.BorderSize = 0;
+            btnAsin.FlatStyle = FlatStyle.Flat;
+            btnAsin.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAsin.Location = new Point(222, 115);
+            btnAsin.Name = "btnAsin";
+            btnAsin.Size = new Size(56, 43);
+            btnAsin.TabIndex = 63;
+            btnAsin.Text = "Sin⁻¹";
+            btnAsin.UseVisualStyleBackColor = false;
+            // 
+            // btnAngleMode
+            // 
+            btnAngleMode.BackColor = SystemColors.ControlDarkDark;
+            btnAngleMode.BackgroundImageLayout = ImageLayout.Stretch;
+            btnAngleMode.Cursor = Cursors.Hand;
+            btnAngleMode.FlatAppearance.BorderSize = 0;
+            btnAngleMode.FlatStyle = FlatStyle.Flat;
+            btnAngleMode.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAngleMode.Location = new Point(284, 115);
+            btnAngleMode.Name = "btnAngleMode";
+            btnAngleMode.Size = new Size(56, 43);
+            btnAngleMode.TabIndex = 64;
+            btnAngleMode.Text = "DEG";
+            btnAngleMode.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -375,7 +696,27 @@ namespace Calculadora.WinForms
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Desktop;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(386, 561);
+            ClientSize = new Size(384, 719);
+            Controls.Add(btnAngleMode);
+            Controls.Add(btnAsin);
+            Controls.Add(btnAcos);
+            Controls.Add(btnAtan);
+            Controls.Add(btnEuler);
+            Controls.Add(btnSin);
+            Controls.Add(btnCos);
+            Controls.Add(btnTan);
+            Controls.Add(btnSqrt);
+            Controls.Add(btnPower);
+            Controls.Add(btnInverse);
+            Controls.Add(btnLog);
+            Controls.Add(btnLn);
+            Controls.Add(btnSquare);
+            Controls.Add(btnMMinus);
+            Controls.Add(btnMPlus);
+            Controls.Add(btnMR);
+            Controls.Add(btnMC);
+            Controls.Add(btnParenthesis);
+            Controls.Add(btnPi);
             Controls.Add(btnIgual);
             Controls.Add(btnPoint);
             Controls.Add(btn0);
@@ -427,5 +768,25 @@ namespace Calculadora.WinForms
         private CircularButton btn0;
         private CircularButton btnPoint;
         private CircularButton btnIgual;
+        private CircularButton btnPi;
+        private CircularButton btnParenthesis;
+        private CircularButton btnMC;
+        private CircularButton btnMR;
+        private CircularButton btnMPlus;
+        private CircularButton btnMMinus;
+        private CircularButton btnSquare;
+        private CircularButton btnLn;
+        private CircularButton btnLog;
+        private CircularButton btnInverse;
+        private CircularButton btnPower;
+        private CircularButton btnSqrt;
+        private CircularButton btnTan;
+        private CircularButton btnCos;
+        private CircularButton btnSin;
+        private CircularButton btnEuler;
+        private CircularButton btnAtan;
+        private CircularButton btnAcos;
+        private CircularButton btnAsin;
+        private CircularButton btnAngleMode;
     }
 }
